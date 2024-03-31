@@ -1,0 +1,550 @@
+https://lineicons.com/icons
+
+
+<body>
+    <!-- =============== Navigation ================ -->
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="logo-apple"></ion-icon>
+                        </span>
+                        <span class="title">Brand Name</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </span>
+                        <span class="title">Dashboard</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="people-outline"></ion-icon>
+                        </span>
+                        <span class="title">Customers</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="chatbubble-outline"></ion-icon>
+                        </span>
+                        <span class="title">Messages</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="help-outline"></ion-icon>
+                        </span>
+                        <span class="title">Help</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="settings-outline"></ion-icon>
+                        </span>
+                        <span class="title">Settings</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="lock-closed-outline"></ion-icon>
+                        </span>
+                        <span class="title">Password</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="log-out-outline"></ion-icon>
+                        </span>
+                        <span class="title">Sign Out</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- ========================= Main ==================== -->
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </div>
+
+                <div class="search">
+                    <label>
+                        <input type="text" placeholder="Search here">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </label>
+                </div>
+
+                <div class="user">
+                    <img src="assets/imgs/customer01.jpg" alt="">
+                </div>
+            </div>
+
+            <!-- ======================= Cards ================== -->
+            <div class="cardBox">
+                <div class="card">
+                    <div>
+                        <div class="numbers">1,504</div>
+                        <div class="cardName">Daily Views</div>
+                    </div>
+
+                    <div class="iconBx">
+                        <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <div class="numbers">80</div>
+                        <div class="cardName">Sales</div>
+                    </div>
+
+                    <div class="iconBx">
+                        <ion-icon name="cart-outline"></ion-icon>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <div class="numbers">284</div>
+                        <div class="cardName">Comments</div>
+                    </div>
+
+                    <div class="iconBx">
+                        <ion-icon name="chatbubbles-outline"></ion-icon>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <div class="numbers">$7,842</div>
+                        <div class="cardName">Earning</div>
+                    </div>
+
+                    <div class="iconBx">
+                        <ion-icon name="cash-outline"></ion-icon>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ================ Order Details List ================= -->
+            <div class="details">
+                <div class="recentOrders">
+                    <div class="cardHeader">
+                        <h2>Recent Orders</h2>
+                        <a href="#" class="btn">View All</a>
+                    </div>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>Name</td>
+                                <td>Price</td>
+                                <td>Payment</td>
+                                <td>Status</td>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>Star Refrigerator</td>
+                                <td>$1200</td>
+                                <td>Paid</td>
+                                <td><span class="status delivered">Delivered</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>Dell Laptop</td>
+                                <td>$110</td>
+                                <td>Due</td>
+                                <td><span class="status pending">Pending</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>Apple Watch</td>
+                                <td>$1200</td>
+                                <td>Paid</td>
+                                <td><span class="status return">Return</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>Addidas Shoes</td>
+                                <td>$620</td>
+                                <td>Due</td>
+                                <td><span class="status inProgress">In Progress</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>Star Refrigerator</td>
+                                <td>$1200</td>
+                                <td>Paid</td>
+                                <td><span class="status delivered">Delivered</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>Dell Laptop</td>
+                                <td>$110</td>
+                                <td>Due</td>
+                                <td><span class="status pending">Pending</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>Apple Watch</td>
+                                <td>$1200</td>
+                                <td>Paid</td>
+                                <td><span class="status return">Return</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>Addidas Shoes</td>
+                                <td>$620</td>
+                                <td>Due</td>
+                                <td><span class="status inProgress">In Progress</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- ================= New Customers ================ -->
+                <div class="recentCustomers">
+                    <div class="cardHeader">
+                        <h2>Recent Customers</h2>
+                    </div>
+
+                    <table>
+                        <tr>
+                            <td width="60px">
+                                <div class="imgBx"><img src="assets/imgs/customer02.jpg" alt=""></div>
+                            </td>
+                            <td>
+                                <h4>David <br> <span>Italy</span></h4>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td width="60px">
+                                <div class="imgBx"><img src="assets/imgs/customer01.jpg" alt=""></div>
+                            </td>
+                            <td>
+                                <h4>Amit <br> <span>India</span></h4>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td width="60px">
+                                <div class="imgBx"><img src="assets/imgs/customer02.jpg" alt=""></div>
+                            </td>
+                            <td>
+                                <h4>David <br> <span>Italy</span></h4>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td width="60px">
+                                <div class="imgBx"><img src="assets/imgs/customer01.jpg" alt=""></div>
+                            </td>
+                            <td>
+                                <h4>Amit <br> <span>India</span></h4>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td width="60px">
+                                <div class="imgBx"><img src="assets/imgs/customer02.jpg" alt=""></div>
+                            </td>
+                            <td>
+                                <h4>David <br> <span>Italy</span></h4>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td width="60px">
+                                <div class="imgBx"><img src="assets/imgs/customer01.jpg" alt=""></div>
+                            </td>
+                            <td>
+                                <h4>Amit <br> <span>India</span></h4>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td width="60px">
+                                <div class="imgBx"><img src="assets/imgs/customer01.jpg" alt=""></div>
+                            </td>
+                            <td>
+                                <h4>David <br> <span>Italy</span></h4>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td width="60px">
+                                <div class="imgBx"><img src="assets/imgs/customer02.jpg" alt=""></div>
+                            </td>
+                            <td>
+                                <h4>Amit <br> <span>India</span></h4>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- =========== Scripts =========  -->
+    <script src="assets/js/main.js"></script>
+
+    <!-- ====== ionicons ======= -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+
+
+
+
+
+/////////////////////////////////////////////////////////////
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+ <head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Sidebar menu With Sub-menus | Using HTML, CSS & JQuery</title>
+   <style media="screen">
+     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ font-family: "Poppins", sans-serif;
+}
+
+body{
+ min-height: 100vh;
+ background: white;
+ color: white;
+ background-size: cover;
+ background-position: center;
+}
+
+.side-bar{
+ background: #1b1a1b;
+ backdrop-filter: blur(15px);
+ width: 250px;
+ height: 100vh;
+ position: fixed;
+ top: 0;
+ left: -250px;
+ overflow-y: auto;
+ transition: 0.6s ease;
+ transition-property: left;
+}
+.side-bar::-webkit-scrollbar {
+  width: 0px;
+}
+
+
+
+.side-bar.active{
+ left: 0;
+}
+h1{
+
+  text-align: center;
+  font-weight: 500;
+  font-size: 25px;
+  padding-bottom: 13px;
+  font-family: sans-serif;
+  letter-spacing: 2px;
+}
+
+.side-bar .menu{
+ width: 100%;
+ margin-top: 30px;
+}
+
+.side-bar .menu .item{
+ position: relative;
+ cursor: pointer;
+}
+
+.side-bar .menu .item a{
+ color: #fff;
+ font-size: 16px;
+ text-decoration: none;
+ display: block;
+ padding: 5px 30px;
+ line-height: 60px;
+}
+
+.side-bar .menu .item a:hover{
+ background: #33363a;
+ transition: 0.3s ease;
+}
+
+.side-bar .menu .item i{
+ margin-right: 15px;
+}
+
+.side-bar .menu .item a .dropdown{
+ position: absolute;
+ right: 0;
+ margin: 20px;
+ transition: 0.3s ease;
+}
+
+.side-bar .menu .item .sub-menu{
+ background: #262627;
+ display: none;
+}
+
+.side-bar .menu .item .sub-menu a{
+ padding-left: 80px;
+}
+
+.rotate{
+ transform: rotate(90deg);
+}
+
+.close-btn{
+ position: absolute;
+ color: #fff;
+
+ font-size: 23px;
+ right:  0px;
+ margin: 15px;
+ cursor: pointer;
+}
+
+.menu-btn{
+ position: absolute;
+ color: rgb(0, 0, 0);
+ font-size: 35px;
+ margin: 25px;
+ cursor: pointer;
+}
+
+.main{
+ height: 100vh;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ padding: 50px;
+}
+
+.main h1{
+ color: rgba(255, 255, 255, 0.8);
+ font-size: 60px;
+ text-align: center;
+ line-height: 80px;
+}
+
+@media (max-width: 900px){
+ .main h1{
+   font-size: 40px;
+   line-height: 60px;
+ }
+}
+img{
+  width: 100px;
+  margin: 15px;
+  border-radius: 50%;
+  margin-left: 70px;
+  border: 3px solid #b4b8b9;
+}
+header{
+  background: #33363a;
+}
+
+   </style>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
+ </head>
+ <body>
+
+   <div class="menu-btn">
+     <i class="fas fa-bars"></i>
+   </div>
+
+
+   <div class="side-bar">
+
+     <header>
+
+
+
+     <div class="close-btn">
+
+       <i class="fas fa-times"></i>
+     </div>
+     <img src="https://lh3.googleusercontent.com/a-/AOh14Gj99VObFyE8W_h8RrcwZO_aYiIHu5AAa_XpnOym=s600-k-no-rp-mo" alt="">
+          <h1>Mystery Code</h1>
+        </header>
+     <div class="menu">
+       <div class="item"><a href="#"><i class="fas fa-desktop"></i>Dashboard</a></div>
+       <div class="item">
+         <a class="sub-btn"><i class="fas fa-table"></i>Tables<i class="fas fa-angle-right dropdown"></i></a>
+         <div class="sub-menu">
+           <a href="#" class="sub-item">Sub Item 01</a>
+           <a href="#" class="sub-item">Sub Item 02</a>
+           <a href="#" class="sub-item">Sub Item 03</a>
+         </div>
+       </div>
+       <div class="item"><a href="#"><i class="fas fa-th"></i>Forms</a></div>
+       <div class="item">
+         <a class="sub-btn"><i class="fas fa-cogs"></i>Settings<i class="fas fa-angle-right dropdown"></i></a>
+         <div class="sub-menu">
+           <a href="#" class="sub-item">Sub Item 01</a>
+           <a href="#" class="sub-item">Sub Item 02</a>
+         </div>
+       </div>
+       <div class="item"><a href="#"><i class="fas fa-info-circle"></i>About</a></div>
+     </div>
+   </div>
+   <section class="main">
+     <h1>Sidebar Menu With<br>Sub-Menus</h1>
+   </section>
+
+   <script type="text/javascript">
+   $(document).ready(function(){
+     //jquery for toggle sub menus
+     $('.sub-btn').click(function(){
+       $(this).next('.sub-menu').slideToggle();
+       $(this).find('.dropdown').toggleClass('rotate');
+     });
+
+     //jquery for expand and collapse the sidebar
+     $('.menu-btn').click(function(){
+       $('.side-bar').addClass('active');
+       $('.menu-btn').css("visibility", "hidden");
+     });
+
+     $('.close-btn').click(function(){
+       $('.side-bar').removeClass('active');
+       $('.menu-btn').css("visibility", "visible");
+     });
+   });
+   </script>
+
+ </body>
+</html>
