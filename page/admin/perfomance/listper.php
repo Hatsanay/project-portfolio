@@ -103,7 +103,7 @@
                 </li>
             </ul>
             <div class="sidebar-footer">
-                <a href="#" class="sidebar-link">
+                <a href="../../../admin.php" class="sidebar-link">
                     <i class="lni lni-exit"></i>
                     <span>Logout</span>
                 </a>
@@ -111,7 +111,7 @@
         </aside>
         <div class="main p-3">
         <div>
-            <a href="addper.php" class=""addbtntable><button type="button" class="btnadd">เพิ่มผลงานใหม่</button></a>
+            <a href="addper.php"><button type="button" class="btnadd">เพิ่มผลงานใหม่</button></a>
         </div>
         <table id="example" class="table table-striped" style="width:100%">
         <thead>
