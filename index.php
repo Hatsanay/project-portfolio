@@ -45,6 +45,7 @@
             document.querySelector('.slide').prepend(items[items.length - 1]);
         });
 
+
         // เพิ่ม setInterval เพื่อเรียกฟังก์ชัน slide เป็นระยะๆ
         setInterval(() => {
             const items = document.querySelectorAll('.item');

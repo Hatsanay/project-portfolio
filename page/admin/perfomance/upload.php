@@ -47,7 +47,10 @@ if(!empty(array_filter($_FILES['per_img']['name']))){
             $stmt->execute();
         }
 
-        echo "Files uploaded successfully.";
+        // echo "Files uploaded successfully.";
+        $message = "อัพโหลดไฟล์เสร็จสิ้น";
+        echo "<script>alert('$message');</script>";
+        echo "<script>window.location.href = 'listper.php';</script>";
     }else{
         echo "Error uploading files.";
     }

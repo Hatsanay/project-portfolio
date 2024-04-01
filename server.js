@@ -84,54 +84,7 @@ app.post('/api/data', (req, res) => {
   });
 });
 
-// API endpoint สำหรับอัปโหลดไฟล์หลายรูป
-app.post('/api/addimgper', (req, res) => {
-  // Check if per_img field is present
-  if (!req.files || !req.files.per_img) {
-    res.status(400).json({ error: 'per_img field is required' });
-    return;
-  }
 
-  upload2(req, res, function (err) {
-    if (err instanceof multer.MulterError) {
-      console.error('Multer Error:', err);
-      res.status(500).json({ error: 'Internal Server Error' });
-      return;
-    } else if (err) {
-      console.error('Error uploading files:', err);
-      res.status(500).json({ error: 'Internal Server Error' });
-      return;
-    }
-
-    // อัปโหลดไฟล์สำเร็จ
-    const { img_per_id } = req.body;
-    const files = req.files.per_img; // อ่านค่าไฟล์จาก req.files.per_img แทน
-
-    const insertedData = [];
-
-    if (!files || files.length === 0) {
-      res.status(400).json({ error: 'No files uploaded' });
-      return;
-    }
-
-    // วนลูปเพื่อเก็บข้อมูลของไฟล์ที่อัปโหลด
-    files.forEach(file => {
-      const imgper_name = 'uploads2/' + file.filename;
-      insertedData.push([imgper_name, img_per_id]);
-    });
-
-    // เพิ่มข้อมูลลงในฐานข้อมูล
-    const sql = 'INSERT INTO tbl_imgper (imgper_name, img_per_id) VALUES ?';
-    db.query(sql, [insertedData], (err, result) => {
-      if (err) {
-        console.error('Error inserting data:', err);
-        res.status(500).json({ error: 'Internal Server Error' });
-        return;
-      }
-      res.status(200).json({ message: 'Data added successfully' }); // เพิ่มบรรทัดนี้
-    });
-  });
-});
 
 
 // สร้าง API endpoint สำหรับรับข้อมูล
