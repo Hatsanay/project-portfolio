@@ -26,7 +26,7 @@
             </div>
             <ul class="sidebar-nav">
                 <li class="sidebar-item">
-                    <a href="#" class="sidebar-link active">
+                    <a href="dashboard.php" class="sidebar-link active">
                     <i class="lni lni-dashboard"></i>
                         <span>Dashboard</span>
                     </a>

@@ -3,6 +3,7 @@ const cors = require('cors');
 const mysql = require('mysql');
 const multer = require('multer');
 const path = require('path');
+const fs = require('fs');
 const app = express();
 const port = 3000;
 
@@ -25,29 +26,42 @@ db.connect((err) => {
 });
 
 const storage = multer.diskStorage({
-    destination: function (req, file, cb) {
-      cb(null, 'uploads/'); // กำหนดโฟลเดอร์ที่เก็บไฟล์
-    },
-    filename: function (req, file, cb) {
-      cb(null, Date.now() + path.extname(file.originalname)); // กำหนดชื่อไฟล์ใหม่
-    }
-  });
+  destination: function (req, file, cb) {
+    cb(null, 'uploads/'); // กำหนดโฟลเดอร์ที่เก็บไฟล์
+  },
+  filename: function (req, file, cb) {
+    cb(null, Date.now() + path.extname(file.originalname)); // กำหนดชื่อไฟล์ใหม่
+  }
+});
 
-  const upload = multer({ storage: storage }).single('per_profile');
-  // API endpoint สำหรับรับข้อมูลและไฟล์รูปภาพ
+const storage2 = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, 'uploads2/'); // กำหนดโฟลเดอร์ที่เก็บไฟล์
+  },
+  filename: function (req, file, cb) {
+    cb(null, Date.now() + path.extname(file.originalname)); // กำหนดชื่อไฟล์ใหม่
+  }
+});
 
-  // เส้นทางสำหรับเข้าถึงไฟล์รูปภาพที่อัปโหลด
-  app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+const upload = multer({ storage: storage }).single('per_profile');
+const upload2 = multer({
+  storage: storage2,
+  limits: { files: 10 } // เพิ่มกำหนดการอัปโหลดไฟล์หลายรูป
+}).array('per_img', 10);
+
+
+// เส้นทางสำหรับเข้าถึงไฟล์รูปภาพที่อัปโหลด
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+app.use('/uploads2', express.static(path.join(__dirname, 'uploads2')));
+
 // API endpoint สำหรับรับข้อมูลและไฟล์รูปภาพ
 app.post('/api/data', (req, res) => {
   upload(req, res, function (err) {
     if (err instanceof multer.MulterError) {
-      // มีข้อผิดพลาดเกี่ยวกับ multer
       console.error('Multer Error:', err);
       res.status(500).json({ error: 'Internal Server Error' });
       return;
     } else if (err) {
-      // มีข้อผิดพลาดอื่น ๆ
       console.error('Error uploading file:', err);
       res.status(500).json({ error: 'Internal Server Error' });
       return;
@@ -65,7 +79,56 @@ app.post('/api/data', (req, res) => {
         res.status(500).json({ error: 'Internal Server Error' });
         return;
       }
-      res.status(200).json({ message: 'Data added successfully' });
+      res.status(200).json({ message: 'Data added successfully' }); // เพิ่มบรรทัดนี้
+    });
+  });
+});
+
+// API endpoint สำหรับอัปโหลดไฟล์หลายรูป
+app.post('/api/addimgper', (req, res) => {
+  // Check if per_img field is present
+  if (!req.files || !req.files.per_img) {
+    res.status(400).json({ error: 'per_img field is required' });
+    return;
+  }
+
+  upload2(req, res, function (err) {
+    if (err instanceof multer.MulterError) {
+      console.error('Multer Error:', err);
+      res.status(500).json({ error: 'Internal Server Error' });
+      return;
+    } else if (err) {
+      console.error('Error uploading files:', err);
+      res.status(500).json({ error: 'Internal Server Error' });
+      return;
+    }
+
+    // อัปโหลดไฟล์สำเร็จ
+    const { img_per_id } = req.body;
+    const files = req.files.per_img; // อ่านค่าไฟล์จาก req.files.per_img แทน
+
+    const insertedData = [];
+
+    if (!files || files.length === 0) {
+      res.status(400).json({ error: 'No files uploaded' });
+      return;
+    }
+
+    // วนลูปเพื่อเก็บข้อมูลของไฟล์ที่อัปโหลด
+    files.forEach(file => {
+      const imgper_name = 'uploads2/' + file.filename;
+      insertedData.push([imgper_name, img_per_id]);
+    });
+
+    // เพิ่มข้อมูลลงในฐานข้อมูล
+    const sql = 'INSERT INTO tbl_imgper (imgper_name, img_per_id) VALUES ?';
+    db.query(sql, [insertedData], (err, result) => {
+      if (err) {
+        console.error('Error inserting data:', err);
+        res.status(500).json({ error: 'Internal Server Error' });
+        return;
+      }
+      res.status(200).json({ message: 'Data added successfully' }); // เพิ่มบรรทัดนี้
     });
   });
 });
