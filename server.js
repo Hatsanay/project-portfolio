@@ -101,6 +101,25 @@ app.get('/api/data', (req, res) => {
   });
 });
 
+
+// API endpoint สำหรับดึงรูปภาพที่เกี่ยวข้องด้วย ID ของผลงาน
+app.get('/api/images/:per_images_id', (req, res) => {
+  const per_images_id = req.params.per_images_id;
+  const sql = 'SELECT imgper_name FROM tbl_imgper WHERE img_per_id = ?';
+
+  db.query(sql, [per_images_id], (err, result) => {
+    if (err) {
+      console.error('Error querying images:', err);
+      res.status(500).json({ error: 'Internal Server Error' });
+      return;
+    }
+    const imageNames = result.map(row => row.imgper_name);
+    res.json(imageNames);
+  });
+});
+
+
+
 // เริ่มต้น Express server ที่ port 3000
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
